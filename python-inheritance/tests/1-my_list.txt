@@ -26,3 +26,12 @@ An empty MyList prints sorted as an empty list:
     >>> empty = MyList()
     >>> empty.print_sorted()
     []
+
+Sorting handles negative numbers too:
+
+    >>> neg_list = MyList()
+    >>> neg_list.append(3)
+    >>> neg_list.append(-5)
+    >>> neg_list.append(1)
+    >>> neg_list.print_sorted()
+    [-5, 1, 3]
