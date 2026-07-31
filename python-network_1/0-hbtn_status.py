@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""Module that fetches https://alu-intranet.hbtn.io/status using urllib."""
+"""Module that fetches a URL and displays info about the response body."""
 import urllib.request
+import sys
 
 
 if __name__ == "__main__":
-    with urllib.request.urlopen("https://alu-intranet.hbtn.io/status") as response:
+    with urllib.request.urlopen(sys.argv[1]) as response:
         body = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(body)))
