@@ -1,0 +1,41 @@
+The ``5-text_indentation`` module
+====================================
+
+Using ``text_indentation``
+-----------------------------
+
+Import the function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+A sentence ending with a period:
+
+    >>> text_indentation("Hello there.")
+    Hello there.
+    <BLANKLINE>
+
+A question and a statement together:
+
+    >>> text_indentation("Are you there? Yes I am.")
+    Are you there?
+    <BLANKLINE>
+    Yes I am.
+    <BLANKLINE>
+
+A colon splits the line too:
+
+    >>> text_indentation("Note: this works.")
+    Note:
+    <BLANKLINE>
+    this works.
+    <BLANKLINE>
+
+A non-string argument raises a TypeError:
+
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+An empty string prints nothing:
+
+    >>> text_indentation("")
